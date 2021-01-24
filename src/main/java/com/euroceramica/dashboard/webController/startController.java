@@ -13,6 +13,6 @@ public class startController {
 
     @GetMapping("")
     public ResponseEntity<Boolean> startConection(){
-        return new ResponseEntity(true, HttpStatus.OK);
+        return new ResponseEntity<>(true, HttpStatus.OK);
     }
 }
