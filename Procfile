@@ -1,0 +1,1 @@
+web: java -jar build/libs/dashboard-1.0.jar
