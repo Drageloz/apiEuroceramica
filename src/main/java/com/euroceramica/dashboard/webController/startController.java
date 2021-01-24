@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("")
 public class startController {
-
+    //Este es el inicio de la aplicacion
     @GetMapping("")
     public ResponseEntity<Boolean> startConection(){
         return new ResponseEntity<>(true, HttpStatus.OK);
