@@ -24,15 +24,6 @@ public class UsersController {
         return new ResponseEntity<>(usersService.getAll(), HttpStatus.OK);
     }
 
-    /*
-    @GetMapping("/{id}")
-    public ResponseEntity<Users> getById(@PathVariable("id") int userId){
-        return usersService.getUser(userId)
-                .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
-    */
-
     @GetMapping("/{name}")
     public ResponseEntity<Users> getByUserName(@PathVariable("name") String userName){
             return usersService.getUserByUserName(userName)
