@@ -13,20 +13,20 @@ public class EntityUsers {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "usid")
+    @Column(name = "us_id")
     private Integer usId;
 
 
-    @Column(name = "ususer")
+    @Column(name = "us_user")
     private String usUser;
 
-    @Column(name = "usprofile")
+    @Column(name = "us_profile")
     private String usProfile;
 
-    @Column(name = "uspass")
+    @Column(name = "us_password")
     private String usPass;
 
-    @Column(name = "usstatus")
+    @Column(name = "us_status")
     private String usStatus;
 
     public Integer getUsId() {
