@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/CountersExample")
@@ -22,7 +23,22 @@ public class CounterExampleController {
     public CounterExampleService counterExampleService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<CounterExample>> setIncrement(){
+    public ResponseEntity<List<CounterExample>> getAll(){
         return new ResponseEntity<>(counterExampleService.getAll(), HttpStatus.OK);
     }
+
+    @GetMapping("/increment")
+    public ResponseEntity<CounterExample> increment(){
+        CounterExample counterExample = counterExampleService.getCounterById(1).get();
+        counterExample.setCeValue(counterExample.getCeValue() + 1);
+        return new ResponseEntity<CounterExample>(counterExampleService.save(counterExample), HttpStatus.OK);
+    }
+
+    @GetMapping("/decrement")
+    public ResponseEntity<CounterExample> decrement(){
+        CounterExample counterExample = counterExampleService.getCounterById(1).get();
+        counterExample.setCeValue(counterExample.getCeValue() - 1);
+        return new ResponseEntity<CounterExample>(counterExampleService.save(counterExample), HttpStatus.OK);
+    }
+
 }

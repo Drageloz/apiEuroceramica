@@ -13,4 +13,6 @@ public interface CountersExampleMapper {
 
     List<CounterExample> toCounterExample(List<EntityCountersExample> entityCountersExamples);
 
+    EntityCountersExample toCounterExample(CounterExample counterExample);
+
 }

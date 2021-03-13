@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CounterExampleService {
@@ -17,4 +18,8 @@ public class CounterExampleService {
     public List<CounterExample> getAll(){
         return countersExampleRepository.getAll();
     }
+
+    public Optional<CounterExample> getCounterById(Integer counterId){ return countersExampleRepository.getCounterById(counterId);}
+
+    public CounterExample save(CounterExample counterExample){ return countersExampleRepository.save(counterExample); }
 }
