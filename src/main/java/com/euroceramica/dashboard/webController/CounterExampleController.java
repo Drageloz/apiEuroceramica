@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/CounterExample")
+@RequestMapping(path = "/CountersExample")
 @CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 public class CounterExampleController {
 
     @Autowired
     public CounterExampleService counterExampleService;
 
-    @GetMapping("/Increment")
+    @GetMapping("/all")
     public ResponseEntity<List<CounterExample>> setIncrement(){
         return new ResponseEntity<>(counterExampleService.getAll(), HttpStatus.OK);
     }
