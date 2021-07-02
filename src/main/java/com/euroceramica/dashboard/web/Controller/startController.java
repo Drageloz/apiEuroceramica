@@ -1,4 +1,4 @@
-package com.euroceramica.dashboard.webController;
+package com.euroceramica.dashboard.web.Controller;
 
 
 import org.springframework.http.HttpStatus;

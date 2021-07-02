@@ -1,4 +1,4 @@
-package com.euroceramica.dashboard.webController;
+package com.euroceramica.dashboard.web.Controller;
 
 import com.euroceramica.dashboard.domain.Counters;
 import com.euroceramica.dashboard.domain.service.CountersService;
